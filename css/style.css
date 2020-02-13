@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box;
 }
-.img{
-  max-width: 100%;
-}
 body {
   background-color: rgb(48, 96, 160);
   margin: 0;
