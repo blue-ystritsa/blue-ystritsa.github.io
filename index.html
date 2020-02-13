@@ -10,11 +10,23 @@
     <title>Бар "Голубая Устрица"</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="js/scroll.js"></script>  
-<script src="js/slider.js"></script>  
+<script src="/js/scroll.js"></script>  
+<script>
+$('.scrollto a').on('click', function() {
+
+    let href = $(this).attr('href');
+
+    $('html, body').animate({
+        scrollTop: $(href).offset().top
+    }, {
+        duration: 370,   // по умолчанию «400» 
+        easing: "linear" // по умолчанию «swing» 
+    });
+
+    return false;
+});
+</script> 
 </head>
 
 
@@ -46,13 +58,18 @@
                      <li class='has-sub '><a href='#'>Навигация</a>
                         <ul>
                            <li class='has-sub '><a href='#'>По странице</a>
-                              <ul>
+                              
+							  <ul>
+							  
+							  <nav class="scrollto">
                                  <li><a href='#element2'>Сотрудничество</a></li>
                                  <li><a href='#element3'>Отзывы</a></li>
                                   <li><a href='#element1'>Контакты</a></li>
                                   <li><a href='#'>Кнопочка</a></li>
-                              </ul>
-                           </li>
+                              </nav>
+							  
+							  </ul>
+							  </li>
                         
                         </ul>
                      </li>
@@ -212,17 +229,6 @@
 
 <!-- Slideshow container -->
 <h2 class="section-title2">Галерея</h2>
-<div class="sim-slider">
-  <ul class="sim-slider-list">
-    <li><img src="img/img2.jpg" alt="screen"></li> <!-- это экран -->
-    <li class="sim-slider-element"><img src="img/img2.jpg" alt="0"></li>
-    <li class="sim-slider-element"><img src="img/img2.jpg" alt="1"></li>
-    <li class="sim-slider-element"><img src="img/img2.jpg" alt="2"></li>
-  </ul>
-  <div class="sim-slider-arrow-left"></div>
-  <div class="sim-slider-arrow-right"></div>
-  <div class="sim-slider-dots"></div>
-</div>
 
       <section id="element1"> </section>
         <h2 class="section-title2">Контакты</h2>
