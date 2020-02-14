@@ -2,7 +2,10 @@
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(48, 96, 160);
+  /*background-color: rgb(48, 96, 160);*/
+  background-image: url('../img/back.jpg');
+  background-size: cover;
+  background-attachment:fixed;
   margin: 0;
   color: white;
   font-family: 'Nunito', sans-serif;
@@ -48,7 +51,7 @@ body {
 .social-link{
   margin-left: 11px;
   margin-right: 10px;
-  height 65px;
+  height: 65px;
   width: 65px;
 }
 .hero-content{
@@ -421,8 +424,8 @@ li {
 #cssmenu a { display: block; line-height: 1em; text-decoration: none; }
 
 #cssmenu {
-  background: rgba(51, 51, 51, 0.897);
-  border-bottom: 4px solid #1878c2;
+  background: rgb(31, 31, 31);
+  border-bottom: 4px solid #3553fd96;
   font-size: 15px; 
   margin-top:-50px;
   margin-bottom: 100px;
@@ -439,7 +442,7 @@ li {
 }
 
 #cssmenu a {
-    background: rgba(51, 51, 51, 0.432);
+    background: rgb(31, 31, 31);
     color: #CBCBCB;
     padding: 0 20px; 
     border-radius: 16px;
@@ -448,7 +451,7 @@ li {
 #cssmenu ul { text-transform: uppercase; }
 
     #cssmenu ul ul {
-      border-top: 4px solid #1878c2;
+      border-top: 4px solid rgba(45, 43, 161, 0.473);
       text-transform: none;
       min-width: 190px; 
  
@@ -508,3 +511,57 @@ li {
   align-items: center;
   margin-top: 100px;
 }
+.wrapper1 { 
+  margin: 0 auto;
+  width: 900px;
+  height: 640px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+@keyframes fade {
+  0%{ opacity: 0; }
+  10%{ opacity: 1; }
+  20%{ opacity: 1; }
+  30%{ opacity: 1; }
+  40%{ opacity: 0; }
+  50%{ opacity: 0; }
+  60%{ opacity: 0; }
+  70%{ opacity: 0; }
+  80%{ opacity: 0; }
+  90%{ opacity: 0;} 
+  100% { opacity: 0; }
+}	
+
+.wrapper1 img { 
+  position:absolute; 
+  margin: 0 auto;
+  width: 895px;
+  overflow: hidden;
+  opacity:0; 
+  animation-name: fade; 
+  animation-duration: 20s; 
+  animation-iteration-count: infinite; 
+}
+.wrapper1 img:nth-child(1) { animation-delay: 0s;  }
+.wrapper1 img:nth-child(2) { animation-delay: 5s;  }
+.wrapper1 img:nth-child(3) { animation-delay: 10s;  }
+.wrapper1 img:nth-child(4) { animation-delay: 15s;  }
+.topbutton {
+  width:40px;
+  border:2px solid #ccc;
+  background:#f7f7f7;
+  text-align:center;
+  padding:10px;
+  position:fixed;
+  bottom:50px;
+  right:50px;
+  cursor:pointer;
+  color:#333;
+  font-family:verdana;
+  font-size:12px;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -khtml-border-radius: 25px;
+  opacity: 0.7;
+  }

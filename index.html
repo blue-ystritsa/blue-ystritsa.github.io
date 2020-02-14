@@ -10,23 +10,10 @@
     <title>Бар "Голубая Устрица"</title>
     <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<script src="/js/slider.js"></script>  
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/js/scroll.js"></script>  
-<script>
-$('.scrollto a').on('click', function() {
 
-    let href = $(this).attr('href');
-
-    $('html, body').animate({
-        scrollTop: $(href).offset().top
-    }, {
-        duration: 370,   // по умолчанию «400» 
-        easing: "linear" // по умолчанию «swing» 
-    });
-
-    return false;
-});
-</script> 
 </head>
 
 
@@ -65,7 +52,7 @@ $('.scrollto a').on('click', function() {
                                  <li><a href='#element2'>Сотрудничество</a></li>
                                  <li><a href='#element3'>Отзывы</a></li>
                                   <li><a href='#element1'>Контакты</a></li>
-                                  <li><a href='#'>Кнопочка</a></li>
+                                  <li><a href='#element4'>Галерея</a></li>
                               </nav>
 							  
 							  </ul>
@@ -228,7 +215,15 @@ $('.scrollto a').on('click', function() {
         </div>
 
 <!-- Slideshow container -->
+<section id="element4"> </section>
 <h2 class="section-title2">Галерея</h2>
+
+<div class="wrapper1">
+  <img src="img/img1.png">
+  <img src="img/img2.png">
+  <img src="img/img3.png">
+  <img src="img/img4.png">
+</div>
 
       <section id="element1"> </section>
         <h2 class="section-title2">Контакты</h2>
