@@ -770,6 +770,7 @@ li {
 		width: 300px;
 		height: 300px;
 		background-size: 300px;
+		margin-right: 40px;
 	}
 	.wrapper1 {
 		height: 640px;
@@ -978,6 +979,10 @@ li {
 			}
 			.project-title {
 				margin-top: -60px;
+			}
+			#cssmenu {
+				margin-top: 30px;
+				margin-bottom: 100px;
 			}
 			/* КОНЕЦ АДАПТИВА*/
 		}
