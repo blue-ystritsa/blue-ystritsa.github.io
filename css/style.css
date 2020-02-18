@@ -33,7 +33,7 @@ body {
 }
 
 .section-title2 {
-	margin-top: 10px;
+	margin-top: 40px;
 	margin-bottom: 25px;
 	font-weight: bold;
 	font-size: 37px;
@@ -741,7 +741,7 @@ li {
 .wrapper1 img:nth-child(4) {
 	animation-delay: 10s;
 }
-
+/* Кнопка наверх */
 .topbutton {
 	width: 40px;
 	border: 2px solid #ccc;
@@ -749,8 +749,8 @@ li {
 	text-align: center;
 	padding: 10px;
 	position: fixed;
-	bottom: 50px;
-	right: 50px;
+	bottom: 20px;
+	right: 20px;
 	cursor: pointer;
 	color: #333;
 	font-family: verdana;

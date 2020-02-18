@@ -7,10 +7,31 @@
       <title>Бар "Голубая Устрица"</title>
       <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
       <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+	  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
       <link rel="stylesheet" href="css/style.css">
-      <script src="/js/slider.js"></script>  
-      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> <!-- ПОДКЛЮЧЕНИЕ JQUERY -->
-      <script src="/js/scroll.js"></script>  <!-- ПОДКЛЮЧЕНИЕ НАВИГАЦИИ ПО СТРАНИЦЕ -->
+      <link rel="stylesheet" href="css/slider.css">	  
+      <script src="js/jquery.min.js"></script> <!-- ПОДКЛЮЧЕНИЕ JQUERY -->
+      <script src="js/scroll.js"></script>  <!-- ПОДКЛЮЧЕНИЕ НАВИГАЦИИ ПО СТРАНИЦЕ -->
+	  <script src="js/sldr.js"></script>
+	  <script type="text/javascript">
+ 
+$(document).ready(function(){
+	$("#menu").on("click","a", function (event) {
+		//отменяем стандартную обработку нажатия по ссылке
+		event.preventDefault();
+
+		//забираем идентификатор бока с атрибута href
+		var id  = $(this).attr('href'),
+
+		//узнаем высоту от начала страницы до блока на который ссылается якорь
+			top = $(id).offset().top;
+		
+		//анимируем переход на расстояние - top за 1500 мс
+		$('body,html').animate({scrollTop: top}, 1500);
+	});
+});
+
+</script>
    </head>
    <body>
       <header class="hero">
@@ -35,11 +56,11 @@
                         <li class='has-sub '>
                            <a href='#'>По странице</a>
                            <ul>
-                              <nav class="scrollto">
-                                 <li><a href='#element2'>Сотрудничество</a></li>
-                                 <li><a href='#element3'>Отзывы</a></li>
-                                 <li><a href='#element1'>Контакты</a></li>
-                                 <li><a href='#element4'>Галерея</a></li>
+                              <nav id="menu">
+                                 		<li><a href="#yak1">Сотрудничество</a></li>
+										<li><a href="#yak2">Отзывы</a></li>
+										<li><a href="#yak3">Контакты</a></li>
+										<li><a href="#yak4">Галерея</a></li>
                               </nav>
                            </ul>
                         </li>
@@ -61,8 +82,8 @@
                      разливного импортного и отечественного пива: от Pen is Deathrow до Old Borow. 
                      Голубая устрица - уникальный проект всемирного объединения любителей баров "Sassie".
                   </p>
-                  <nav class="scrollto">
-                     <button class="button hero-button"><a class="one" href="#element1">Забронировать место</a><br />
+                  <nav id="menu">
+                     <button class="button hero-button"><a class="one" href="#yak3">Забронировать место</a>
                      </button>
                   </nav>
                </div>
@@ -76,9 +97,10 @@
       <main>
       
         <!-- СОТРУДНИЧЕСТВО -->
+			
       <section class="features section">
          <div class="container">
-            <section id="element2"> </section>
+            <section id="yak1"> </section>
             <h2 class="section-title">Сотрудничество с компаниями</h2>
             <div class="features-block">
                <div class="features-item">
@@ -127,10 +149,11 @@
          </div>
       </section>
       
-      <!-- ОТЗЫВЫ -->
-      <section class="section projects">
+      <!-- ОТЗЫВЫ --> 
+     
+	  <section class="section projects">
       <div class="container">
-      <section id="element3"> </section>
+         <section id="yak2"> </section>
       <h2 class="section-title">Отзывы</h2>
       
       <!-- ПЕРВЫЙ-->
@@ -194,17 +217,60 @@
       </div>
       <div class=slizen>
       <!-- СЛАЙДШОУ(ГАЛЕРЕЯ) -->
-      <section id="element4"> </section>
+<section id="yak4"> </section>
       <h2 class="section-title2">Галерея</h2>
-      <div class="wrapper1">
+    <!-- <div class="wrapper1">
          <img src="img/img1.png">
-         <img src="img/img2.png"> <!-- ГОСТИ ДОРОГИЕ) -->
+         <img src="img/img2.png"> 
          <img src="img/img3.png">
          <img src="img/img4.png">
       </div>
-      </div>
+      </div> -->
+    <div class="slide_box">
+        <ul class="slide_pic">
+            <li><img src="img/img11.png"></li>
+            <li><img src="img/img22.png"></li>
+            <li><img src="img/img33.png"></li>
+            <li><img src="img/img44.png"></li>
+        </ul>
+        <ul class="slide_tab"></ul>
+        <a href="javascript:" class="slide_nav slide_prev">&lt;</a>
+        <a href="javascript:" class="slide_nav slide_next">&gt;</a>
+    </div>
+    <script>
+        $(".slide_box").init_slide();
+    </script>
+    <script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	  
       <!-- КОНТАКТЫ -->
-      <section id="element1"> </section>
+      <section id="yak3"> </section>
       <h2 class="section-title2">Контакты</h2>
       <section id="contact">
          <div class="wrap_contact" class="section">
@@ -281,7 +347,7 @@
       </section>
       
       <!-- КНОПКА НАВЕРХ -->
-      <a href="#" title="Вернуться к началу" class="topbutton">^</a>
+      <a href="#" title="Вернуться к началу" class="topbutton" id=menu_plavn>^</a>
       
       <!-- FOOTER -->
       <footer>
