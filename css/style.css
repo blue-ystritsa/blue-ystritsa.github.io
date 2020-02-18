@@ -296,6 +296,8 @@ body {
 #contact {
 	background-color: #ebebeb;
 	opacity: 0.95;
+	border-radius: 35px;
+	box-shadow: 0px 0px 25px rgba(78, 169, 255, 0.425);
 }
 
 #contact h2 {
@@ -455,6 +457,8 @@ body {
 footer {
 	padding: 25px 0;
 	background: #273050;
+	margin-top: 10px;
+	border-radius: 35px;
 }
 
 .copy {
@@ -669,99 +673,39 @@ li {
 }
 
 
-/* СЛАЙДЕР*/
 
-.wrapper1 {
-	margin: 0 auto;
-	width: 900px;
-	height: 640px;
-	overflow: hidden;
-	margin-top: 20px;
-}
-
-@keyframes fade {
-	0% {
-		opacity: 0;
-	}
-	10% {
-		opacity: 1;
-	}
-	20% {
-		opacity: 1;
-	}
-	30% {
-		opacity: 1;
-	}
-	40% {
-		opacity: 0;
-	}
-	50% {
-		opacity: 0;
-	}
-	60% {
-		opacity: 0;
-	}
-	70% {
-		opacity: 0;
-	}
-	80% {
-		opacity: 0;
-	}
-	90% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-.wrapper1 img {
-	position: absolute;
-	margin: 0 auto;
-	width: 895px;
-	overflow: hidden;
-	opacity: 0;
-	animation-name: fade;
-	animation-duration: 14s;
-	animation-iteration-count: infinite;
-}
-
-.wrapper1 img:nth-child(1) {
-	animation-delay: 0s;
-}
-
-.wrapper1 img:nth-child(2) {
-	animation-delay: 4s;
-}
-
-.wrapper1 img:nth-child(3) {
-	animation-delay: 7s;
-}
-
-.wrapper1 img:nth-child(4) {
-	animation-delay: 10s;
-}
 /* Кнопка наверх */
-.topbutton {
-	width: 40px;
-	border: 2px solid #ccc;
-	background: #f7f7f7;
-	text-align: center;
-	padding: 10px;
-	position: fixed;
-	bottom: 20px;
-	right: 20px;
-	cursor: pointer;
-	color: #333;
-	font-family: verdana;
-	font-size: 12px;
-	border-radius: 25px;
-	-moz-border-radius: 25px;
-	-webkit-border-radius: 25px;
-	-khtml-border-radius: 25px;
-	opacity: 0.7;
-}
 
+#back-top {
+    position: fixed;
+    bottom: 0px;
+    padding: 0px;
+    margin-left: 10px;
+    z-index:99991;
+    }
+#back-top a{
+    width: 77px;
+    height: 24px;
+    background: rgba(27, 73, 158, 0.25);
+    display:block;
+    text-decoration:none;
+    -webkit-transition: all linear 0.2s; 
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+	text-align: center;
+         }
+ #back-top a:hover{
+    height: 50px;
+    background: #162746;
+    -webkit-transition: all linear 0.2s; 
+    -moz-transition: all linear 0.2s;
+    -ms-transition: all linear 0.2s;
+    -o-transition: all linear 0.2s;
+    transition: all linear 0.2s;
+    color: #fff;
+    }
 
 /* Начало адаптива */
 
@@ -905,6 +849,7 @@ li {
 			}
 			.hero-header {
 				margin-bottom: 38px;
+				padding: 5px;
 			}
 			.social-link {
 				margin-left: 5px;
@@ -983,6 +928,9 @@ li {
 			#cssmenu {
 				margin-top: 30px;
 				margin-bottom: 100px;
+			}
+			.slide_pic li {
+				left: -40%;
 			}
 			/* КОНЕЦ АДАПТИВА*/
 		}

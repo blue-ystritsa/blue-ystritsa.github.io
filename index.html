@@ -12,26 +12,28 @@
       <link rel="stylesheet" href="css/slider.css">	  
       <script src="js/jquery.min.js"></script> <!-- ПОДКЛЮЧЕНИЕ JQUERY -->
       <script src="js/scroll.js"></script>  <!-- ПОДКЛЮЧЕНИЕ НАВИГАЦИИ ПО СТРАНИЦЕ -->
-	  <script src="js/sldr.js"></script>
-	  <script type="text/javascript">
- 
-$(document).ready(function(){
-	$("#menu").on("click","a", function (event) {
-		//отменяем стандартную обработку нажатия по ссылке
-		event.preventDefault();
+	   <script src="js/sldr.js"></script>
+      <script type="text/javascript">
+    $(document).ready(function(){                            //ПЛАВНОЕ ПЕРЕМЕЩЕНИЕ ПО ЯКОРЯМ
+      $("#menu2").on("click","a", function (event) {         //отменяем стандартную обработку нажатия по ссылке
+         event.preventDefault();                             //забираем идентификатор бока с атрибута href
+         var id  = $(this).attr('href'),                     //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;                        //анимируем переход на расстояние - top за 1500 мс
+         $('body,html').animate({scrollTop: top}, 1500);
+      });
+   });
+   </script>
+   <script type="text/javascript"> //КНОПКА НАВЕРХ
+   function up() {  
+  var top = Math.max(document.body.scrollTop,document.documentElement.scrollTop);  
+if(top > 0) {  
+  window.scrollBy(0,((top+100)/-10));  
+  t = setTimeout('up()',20);  
+} else clearTimeout(t);  
+return false;  
+} 
+   </script>
 
-		//забираем идентификатор бока с атрибута href
-		var id  = $(this).attr('href'),
-
-		//узнаем высоту от начала страницы до блока на который ссылается якорь
-			top = $(id).offset().top;
-		
-		//анимируем переход на расстояние - top за 1500 мс
-		$('body,html').animate({scrollTop: top}, 1500);
-	});
-});
-
-</script>
    </head>
    <body>
       <header class="hero">
@@ -57,10 +59,10 @@ $(document).ready(function(){
                            <a href='#'>По странице</a>
                            <ul>
                               <nav id="menu">
-                                 		<li><a href="#yak1">Сотрудничество</a></li>
+                              <li><a href="#yak1">Сотрудничество</a></li>
 										<li><a href="#yak2">Отзывы</a></li>
 										<li><a href="#yak3">Контакты</a></li>
-										<li><a href="#yak4">Галерея</a></li>
+                              <li><a href="#yak4">Галерея</a></li>
                               </nav>
                            </ul>
                         </li>
@@ -71,7 +73,7 @@ $(document).ready(function(){
             </div>
             <div class="hero-content">
                <div class="hero-text">
-                  
+
                 <!-- ОПИСАНИЕ -->
                   <span class="hero-subtitle">Клуб-Бар</span>
                   <h1 class="hero-title">Голубая Устрица</h1>
@@ -82,10 +84,10 @@ $(document).ready(function(){
                      разливного импортного и отечественного пива: от Pen is Deathrow до Old Borow. 
                      Голубая устрица - уникальный проект всемирного объединения любителей баров "Sassie".
                   </p>
-                  <nav id="menu">
-                     <button class="button hero-button"><a class="one" href="#yak3">Забронировать место</a>
-                     </button>
+                  <nav id="menu2">
+                     <button class="button hero-button"><a class="one" href="#yak3">Забронировать место</a></button>
                   </nav>
+                    
                </div>
                
                <!-- АВАТАР -->
@@ -95,7 +97,6 @@ $(document).ready(function(){
          </div>
       </header>
       <main>
-      
         <!-- СОТРУДНИЧЕСТВО -->
 			
       <section class="features section">
@@ -217,15 +218,10 @@ $(document).ready(function(){
       </div>
       <div class=slizen>
       <!-- СЛАЙДШОУ(ГАЛЕРЕЯ) -->
+
 <section id="yak4"> </section>
       <h2 class="section-title2">Галерея</h2>
-    <!-- <div class="wrapper1">
-         <img src="img/img1.png">
-         <img src="img/img2.png"> 
-         <img src="img/img3.png">
-         <img src="img/img4.png">
-      </div>
-      </div> -->
+
     <div class="slide_box">
         <ul class="slide_pic">
             <li><img src="img/img11.png"></li>
@@ -347,8 +343,10 @@ try {
       </section>
       
       <!-- КНОПКА НАВЕРХ -->
-      <a href="#" title="Вернуться к началу" class="topbutton" id=menu_plavn>^</a>
-      
+      <div id="back-top">
+         <a href="#" onclick="return up()"><font color=white>ВВЕРХ</font></a>  
+         </div>  
+         
       <!-- FOOTER -->
       <footer>
          <div class="copy">
